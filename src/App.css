@@ -1,0 +1,297 @@
+
+/* Default settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #252b3b;
+}
+
+/* Main container */
+.app-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px 20px;
+}
+
+/* Form and Table cards */
+.form-card,
+.table-card {
+  background: #ffffff;
+  border: 1px solid #e7eaf0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Section headings */
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #252b3b;
+}
+
+.plus-icon {
+  width: 25px;
+  height: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #1769e8;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Student form */
+.student-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.9fr auto;
+  align-items: end;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333b4d;
+}
+
+.input-group label span {
+  color: #e53935;
+}
+
+.input-group input {
+  width: 100%;
+  height: 42px;
+  padding: 10px;
+  border: 1px solid #d9dee8;
+  border-radius: 5px;
+  outline: none;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.input-group input:focus,
+.search-box input:focus {
+  border-color: #1769e8;
+  box-shadow: 0 0 0 2px rgba(23, 105, 232, 0.1);
+}
+
+.input-group input::placeholder {
+  color: #9ba2af;
+}
+
+/* Add button */
+.add-btn {
+  height: 42px;
+  min-width: 145px;
+  border: none;
+  border-radius: 5px;
+  background: #1769e8;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-btn:hover {
+  background: #0953c9;
+}
+
+/* Table section */
+.table-card {
+  padding: 20px;
+}
+
+.table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.table-header .section-heading {
+  margin-bottom: 0;
+}
+
+.list-icon {
+  color: #1769e8;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+/* Search box */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 280px;
+  height: 38px;
+  border: 1px solid #e0e4eb;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+.search-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  background: transparent;
+}
+
+/* Table */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead {
+  background: #17243c;
+  color: white;
+}
+
+th {
+  padding: 12px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+td {
+  padding: 9px 10px;
+  border-bottom: 1px solid #e7eaf0;
+  font-size: 13px;
+  color: #30394b;
+}
+
+tbody tr:hover {
+  background: #f8faff;
+}
+
+th:first-child,
+td:first-child {
+  width: 50px;
+}
+
+/* Edit and Delete buttons */
+.action-buttons {
+  display: flex;
+  gap: 7px;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 7px 12px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.edit-btn {
+  background: #1769e8;
+}
+
+.edit-btn:hover {
+  background: #0953c9;
+}
+
+.delete-btn {
+  background: #e04444;
+}
+
+.delete-btn:hover {
+  background: #c62828;
+}
+
+/* Empty message and footer */
+.empty-message {
+  text-align: center;
+  padding: 30px 10px;
+  color: #8b93a1;
+}
+
+.table-footer {
+  text-align: right;
+  margin-top: 15px;
+  font-size: 13px;
+  color: #687184;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #8b93a1;
+  font-size: 12px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .student-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .add-btn {
+    width: 100%;
+  }
+
+  .table-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 12px;
+  }
+
+  .form-card,
+  .table-card {
+    padding: 14px;
+  }
+
+  .student-form {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    font-size: 16px;
+  }
+}
